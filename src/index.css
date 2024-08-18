@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Inconsolata:wght@200..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.1s ease;
+}
+html {
+  scrollbar-width: none !important;
+}
+body {
+  font-family: "Inconsolata", system-ui;
+  color: #191815;
+  background-color: #fbfbfb;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style-type: none;
+}
