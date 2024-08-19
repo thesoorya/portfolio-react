@@ -5,7 +5,7 @@ import './Home.css'
 
 const Home = () => {
     return (
-        <div className="container">
+        <div className="home">
             {projects.map((project, i) => (
                 <Project image={project.image} title={project.title} id={project.id} key={i} />
             ))}
