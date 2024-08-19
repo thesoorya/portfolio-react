@@ -1,0 +1,107 @@
+.about {
+  width: 100%;
+  min-height: 100vh;
+  padding: 4% 5%;
+  background-color: #1d1814;
+  color: #fbfbfb;
+}
+.aboutContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-areas:
+    "profile profileDetails"
+    "profile profileDetails";
+}
+
+.profile {
+  grid-area: profile;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile img {
+  width: 65%;
+  object-fit: cover;
+  object-position: bottom center;
+}
+
+.profiledetails {
+  grid-area: profiledetails;
+  width: 100%;
+  height: 100%;
+}
+
+.about-svg {
+  margin: 50px 0;
+  width: 100%;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-image: url(../../assets/llline.svg);
+  background-size: contain;
+  background-position: center;
+}
+
+.aboutWork {
+  margin-top: 100px;
+  width: 100%;
+  min-height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.experience {
+  min-height: 150px;
+  padding: 10px;
+}
+.education {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.college {
+  padding: 10px;
+  min-height: 150px;
+}
+.school {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.school .ten {
+  padding: 10px;
+  min-height: 150px;
+}
+.school .twelve {
+  padding: 10px;
+  min-height: 150px;
+}
+
+@media (max-width: 991px) {
+  .profile img {
+    width: 90%;
+  }
+}
+
+@media (max-width: 868px) {
+  .aboutWork {
+    grid-template-columns: 1fr;
+  }
+  .education {
+    grid-template-rows: repeat(1, 1fr);
+  }
+  .school {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutContainer {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 5%;
+    grid-template-areas:
+      "profile profile"
+      "profileDetails profileDetails";
+  }
+  .profile img {
+    width: 80%;
+  }
+}
