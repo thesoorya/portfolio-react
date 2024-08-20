@@ -1,9 +1,12 @@
-import React from 'react'
-import { projects } from '../../assets/data'
+import React, { useContext } from 'react'
 import Project from '../../components/Project/Project'
 import './Home.css'
+import { ContextProvider } from '../../components/Context/StoreContext';
 
 const Home = () => {
+
+    const { projects } = useContext(ContextProvider)
+
     return (
         <div className="home">
             {projects.map((project, i) => (

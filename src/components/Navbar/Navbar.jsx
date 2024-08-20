@@ -21,7 +21,7 @@ const Navbar = () => {
         if (activeLink === 'portfolio') {
             return { backgroundColor: '#fbfbfb' };
         } else if (activeLink === 'about') {
-            return { backgroundColor: '#1d1814', color: '#fbfbfb' };
+            return { backgroundColor: '#1d1814', color: '#fdd596' };
         } else {
             return { backgroundColor: '#191815' };
         }
@@ -37,7 +37,7 @@ const Navbar = () => {
                     <li className="nav-items">
                         <Link
                             to="/"
-                            className={`nav-link ${activeLink === 'portfolio' ? 'active' : ''}`}
+                            className="nav-link"
                             onClick={() => handleLinkClick('portfolio')}
                         >
                             Portfolio
@@ -46,7 +46,7 @@ const Navbar = () => {
                     <li className="nav-items">
                         <Link
                             to="/about"
-                            className={`nav-link ${activeLink === 'about' ? 'active' : ''}`}
+                            className="nav-link"
                             onClick={() => handleLinkClick('about')}
                         >
                             About
