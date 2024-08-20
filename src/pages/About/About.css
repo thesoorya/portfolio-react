@@ -1,107 +1,221 @@
 .about {
   width: 100%;
   min-height: 100vh;
-  padding: 4% 5%;
+  padding: 2% 5%;
   background-color: #1d1814;
-  color: #fbfbfb;
+  color: #fdd596;
+  font-family: "Archivo", sans-serif;
 }
 .aboutContainer {
+  width: 100%;
+  font-size: 13px;
+  text-align: justify;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  grid-template-areas:
-    "profile profileDetails"
-    "profile profileDetails";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-flow: row;
+  grid-template-areas: "profile aboutProfile";
 }
-
 .profile {
   grid-area: profile;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.profile img {
-  width: 65%;
-  object-fit: cover;
-  object-position: bottom center;
-}
-
-.profiledetails {
-  grid-area: profiledetails;
   width: 100%;
   height: 100%;
 }
-
-.about-svg {
-  margin: 50px 0;
-  width: 100%;
-  height: 150px;
-  background-repeat: no-repeat;
-  background-image: url(../../assets/llline.svg);
-  background-size: contain;
-  background-position: center;
+.profile img {
+  width: 60%;
+  height: auto;
+  border-radius: 8px;
 }
-
-.aboutWork {
-  margin-top: 100px;
-  width: 100%;
-  min-height: 500px;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+.aboutProfile {
+  grid-area: aboutProfile;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
-.experience {
-  min-height: 150px;
-  padding: 10px;
-}
-.education {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-}
-.college {
-  padding: 10px;
-  min-height: 150px;
-}
-.school {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-.school .ten {
-  padding: 10px;
-  min-height: 150px;
-}
-.school .twelve {
-  padding: 10px;
-  min-height: 150px;
+.about h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  font-family: "Clash Display", sans-serif;
 }
 
 @media (max-width: 991px) {
   .profile img {
-    width: 90%;
+    width: 80%;
   }
 }
-
-@media (max-width: 868px) {
-  .aboutWork {
-    grid-template-columns: 1fr;
-  }
-  .education {
-    grid-template-rows: repeat(1, 1fr);
-  }
-  .school {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
 @media (max-width: 768px) {
   .aboutContainer {
-    grid-template-columns: repeat(1, 1fr);
-    row-gap: 5%;
+    grid-template-columns: 1fr;
     grid-template-areas:
-      "profile profile"
-      "profileDetails profileDetails";
+      "profile"
+      "aboutProfile";
+  }
+  .profile {
+    margin-bottom: 20px;
   }
   .profile img {
     width: 80%;
+  }
+}
+
+.bento {
+  margin-top: 50px;
+  font-size: 12px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 10px;
+  width: 100%;
+  min-height: 500px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #111;
+}
+.experience {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background-color: red;
+  padding: 10px;
+  border-radius: 10px;
+}
+.education {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+}
+.school {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.twelveth {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  padding: 10px;
+  border-radius: 10px;
+}
+.tenth {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  padding: 10px;
+  border-radius: 10px;
+}
+.expericenceTitle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 10px;
+}
+.expericenceTitle h1 {
+  font-size: 400%;
+}
+.college {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+  text-align: center;
+}
+.collegeName {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: red;
+  padding: 10px;
+  border-radius: 10px;
+}
+.batch {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: red;
+  padding: 10px;
+  border-radius: 10px;
+}
+.achievements {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}
+.fswd {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: red;
+  padding: 10px;
+  border-radius: 10px;
+}
+.internship {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: red;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+@media (max-width: 991px) {
+  .bento {
+    grid-template-columns: 1fr;
+  }
+  .twelveth {
+    padding: 15% 10px;
+    text-align: center;
+  }
+  .tenth {
+    padding: 15% 10px;
+    text-align: center;
+  }
+  .expericenceTitle {
+    padding: 15% 10px;
+  }
+  .collegeName {
+    padding: 15% 10px;
+  }
+  .batch {
+    padding: 15% 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .school {
+    grid-template-columns: 1fr;
+  }
+  .expericenceTitle h1 {
+    font-size: 200%;
+  }
+  .college {
+    grid-template-columns: 1fr;
   }
 }
