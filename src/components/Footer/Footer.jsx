@@ -9,14 +9,19 @@ const Footer = () => {
     if (location.pathname === '/') {
       return { backgroundColor: '#fbfbfb', color: '#191815' };
     } else if (location.pathname === '/about') {
-      return { backgroundColor: '#1d1814', color: '#fdd596' };
+      return { backgroundColor: '#1d1814', color: '#fdd596', fontFamily: 'Clash Display, sans-serif' };
     }
-    return {};
+    else {
+      return { backgroundColor: '#f5f5e9', color: '#924727', fontFamily: '"Switzer", serif', fontWeight: '500' }
+    }
   };
 
   return (
     <div className='footer' style={getFooterStyle()}>
-      &copy; Copyright Soorya Narayanan. All Rights Reserved
+      <p>
+        &copy; Copyright <u><a href="mailto:thesooryanarayanan@gmail.com">Soorya Narayanan</a></u>. All Rights Reserved
+      </p>
+
     </div>
   );
 };

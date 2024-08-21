@@ -1,4 +1,4 @@
-.nav {
+.nav__nav {
   width: 100%;
   padding: 4% 5%;
   display: flex;
@@ -7,7 +7,7 @@
   align-items: center;
   text-align: center;
 }
-.brand p {
+.brand__logo p {
   font-size: 22px;
 }
 .navigators {
@@ -15,16 +15,13 @@
   flex-wrap: wrap;
   gap: 20px;
 }
-.active{
-  padding-bottom: 2px;
-  border-bottom: 1px solid #191815;
-}
+
 @media (max-width: 768px) {
-  .nav {
+  .nav__nav {
     flex-direction: column;
     justify-content: space-evenly;
   }
-  .brand p {
+  .brand__logo p {
     margin-bottom: 20px;
   }
   .navigators {

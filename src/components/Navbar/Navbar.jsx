@@ -1,71 +1,62 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
-    const [activeLink, setActiveLink] = useState('portfolio');
 
-    useEffect(() => {
-        const savedLink = localStorage.getItem('activeLink');
-        if (savedLink) {
-            setActiveLink(savedLink);
-        }
-    }, []);
-
-    const handleLinkClick = (link) => {
-        setActiveLink(link);
-        localStorage.setItem('activeLink', link); 
-    };
+    const location = useLocation()
 
     const getNavBarStyle = () => {
-        if (activeLink === 'portfolio') {
-            return { backgroundColor: '#fbfbfb' };
-        } else if (activeLink === 'about') {
-            return { backgroundColor: '#1d1814', color: '#fdd596' };
-        } else {
-            return { backgroundColor: '#191815' };
+        if (location.pathname === '/') {
+            return { backgroundColor: '#fbfbfb', color: '#191815' };
+        }
+        else if (location.pathname === '/about') {
+            return { backgroundColor: '#1d1814', color: '#fdd596', fontFamily: 'Clash Display, sans-serif' };
+        }
+        else {
+            return { backgroundColor: '#f5f5e9', color: '#924727', fontFamily: '"Switzer", serif', fontWeight: '500' }
         }
     };
 
     return (
         <div>
-            <nav className="nav" style={getNavBarStyle()}>
-                <div className="brand" id="brand">
+            <nav className="nav__nav" style={getNavBarStyle()}>
+                <div className="brand__logo" id="brand">
                     <Link to='/' onClick={() => handleLinkClick('portfolio')}><p>Soorya Narayanan</p></Link>
                 </div>
                 <ul className="navigators">
-                    <li className="nav-items">
+                    <li className="nav__items">
                         <Link
                             to="/"
-                            className="nav-link"
+                            className="nav__link"
                             onClick={() => handleLinkClick('portfolio')}
                         >
                             Portfolio
                         </Link>
                     </li>
-                    <li className="nav-items">
+                    <li className="nav__items">
                         <Link
                             to="/about"
-                            className="nav-link"
+                            className="nav__link"
                             onClick={() => handleLinkClick('about')}
                         >
                             About
                         </Link>
                     </li>
-                    <li className="nav-items">
+                    <li className="nav__items">
                         <a
-                            href="https://github.com/your-username"
-                            className="nav-link"
+                            href="https://github.com/thesoorya"
+                            className="nav__link"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             GitHub
                         </a>
                     </li>
-                    <li className="nav-items">
+                    <li className="nav__items">
                         <a
-                            href="https://linkedin.com/in/your-profile"
-                            className="nav-link"
+                            href="https://www.linkedin.com/in/thesooryanarayanan/"
+                            className="nav__link"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
