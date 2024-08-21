@@ -1,0 +1,36 @@
+.skills {
+  width: 75%;
+  margin: auto;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  place-items: center;
+}
+.skill {
+  width: 100px;
+  height: 100px;
+  font-size: 200%;
+  background-color: #000;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 876px) {
+  .skills {
+    width: 100%;
+  }
+}
+
+@media (max-width: 300px) {
+  .skills {
+    width: 100%;
+    gap: 5px;
+  }
+  .skill {
+    width: 80px;
+    height: 80px;
+  }
+}
