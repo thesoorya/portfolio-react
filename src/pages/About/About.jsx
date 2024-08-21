@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { ContextProvider } from "../../components/Context/StoreContext";
 import "./About.css";
+import Skills from "../../components/Skills/Skills";
 
 const About = () => {
   const { profile } = useContext(ContextProvider);
@@ -12,23 +13,23 @@ const About = () => {
           <img src={profile} alt="" />
         </div>
         <div className="aboutProfile">
-          <h1>About Me</h1>
           <p>
-            Hello! I’m Soorya Narayanan, a passionate Full Stack Developer from
-            Coimbatore, India. With a bachelor's degree in Computer Science from
-            Sri Ramakrishna College of Arts and Science, I have honed my skills
+            Hey! I’m Soorya Narayanan, a passionate Full Stack Developer from
+            Coimbatore, India. With a bachelor's degree in Computer Science, I have honed my skills
             in web development through a rigorous Full Stack Web Development
             program and hands-on projects.
           </p>
-          <h1>My Journey</h1>
+          <br />
+          <h3>My Journey</h3>
           <p>
             My journey into web development began with a curiosity about how
             websites are built and function. This curiosity turned into a
             passion as I delved deeper into both frontend and backend
             technologies.{" "}
           </p>
+          <br />
           <div>
-            <h2>What I Do</h2>
+            <h3>What I Do</h3>
             <ul>
               <li>
                 <span>Frontend Development</span>: Building intuitive and
@@ -41,12 +42,19 @@ const About = () => {
               </li>
             </ul>
           </div>
-          <h2>Looking Forward</h2>
-          <p>
-            I’m always eager to take on new challenges and collaborate on
-            innovative projects. I approach each task with enthusiasm and
-            dedication.
-          </p>
+          <br />
+          <div>
+            <h3>Looking Forward</h3>
+            <p>
+              I’m always eager to take on new challenges and collaborate on
+              innovative projects. I approach each task with enthusiasm and
+              dedication.
+            </p>
+          </div>
+          <br />
+          <div style={{fontSize: '18px'}}>
+            <u>contact: </u><u><a href="mailto:thesooryanarayanan@gmail.com">thesooryanarayanan@gmail.com</a></u>
+          </div>
         </div>
       </div>
 
@@ -101,7 +109,7 @@ const About = () => {
             <div className="batch">
               <div>
                 <h1>Batch</h1>
-                <h1>2020 - 2023</h1>
+                <h2>2020 - 2023</h2>
               </div>
             </div>
           </div>
@@ -109,7 +117,7 @@ const About = () => {
         <div className="achievements">
           <div className="fswd">
             <div>
-              <h1>Full Stack Web Development Program</h1>
+              <h1>Full Stack Web Development</h1>
               <p>
                 Completed a comprehensive Full Stack Web Development program
                 specializing in the MERN stack (MongoDB, Express.js, React.js,
@@ -132,7 +140,7 @@ const About = () => {
           </div>
           <div className="internship">
             <div>
-              <h1>Web Development Program Internship</h1>
+              <h1>Web Development Internship</h1>
               <p>
                 Completed an internship at Edureka! Learning Center from March
                 to April 2024, during which I earned a certificate for my
@@ -145,6 +153,8 @@ const About = () => {
           </div>
         </div>
       </div>
+
+      <div className="skills"><Skills /></div>
     </div>
   );
 };
