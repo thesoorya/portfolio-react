@@ -1,10 +1,9 @@
 .project {
-  font-family: 'Switzer', sans-serif;
   padding: 1% 5%;
   width: 100%;
   min-height: 100vh;
-  background-color: #f5f5e9;
-  color: #9b5f41;
+  background-color: #fbfbfb;
+  color: #191815;
 }
 .project h1,
 h2,
@@ -37,10 +36,6 @@ h6 {
 .projectDetails {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-}
-
-.projectDetails h1 {
-  color: #9b5f41;
 }
 
 .projectLinks u {

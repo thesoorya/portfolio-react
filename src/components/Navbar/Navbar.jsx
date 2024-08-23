@@ -11,10 +11,10 @@ const Navbar = () => {
             return { backgroundColor: '#fbfbfb', color: '#191815' };
         }
         else if (location.pathname === '/about') {
-            return { backgroundColor: '#1d1814', color: '#fdd596', fontFamily: 'Clash Display, sans-serif' };
+            return { backgroundColor: '#1d1814', color: '#fdd596', fontFamily: '"Archivo", sans-serif' };
         }
         else {
-            return { backgroundColor: '#f5f5e9', color: '#924727', fontFamily: '"Switzer", serif', fontWeight: '500' }
+            return { backgroundColor: '#fbfbfb', color: '#191815' };
         }
     };
 
