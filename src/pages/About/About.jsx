@@ -2,12 +2,18 @@ import React, { useContext } from "react";
 import { ContextProvider } from "../../components/Context/StoreContext";
 import "./About.css";
 import Skills from "../../components/Skills/Skills";
+import { motion } from "framer-motion";
 
 const About = () => {
   const { profile } = useContext(ContextProvider);
 
   return (
-    <div className="about">
+    <motion.div
+      className="about"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, transition: {duration: .3} }}
+    >
       <div className="aboutContainer">
         <div className="profile">
           <img src={profile} alt="" />
@@ -15,9 +21,9 @@ const About = () => {
         <div className="aboutProfile">
           <p>
             Hey! I’m Soorya Narayanan, a passionate Full Stack Developer from
-            Coimbatore, India. With a bachelor's degree in Computer Science, I have honed my skills
-            in web development through a rigorous Full Stack Web Development
-            program and hands-on projects.
+            Coimbatore, India. With a bachelor's degree in Computer Science, I
+            have honed my skills in web development through a rigorous Full
+            Stack Web Development program and hands-on projects.
           </p>
           <br />
           <h3>My Journey</h3>
@@ -52,8 +58,13 @@ const About = () => {
             </p>
           </div>
           <br />
-          <div style={{fontSize: '18px'}}>
-            <u>contact: </u><u><a href="mailto:thesooryanarayanan@gmail.com">thesooryanarayanan@gmail.com</a></u>
+          <div style={{ fontSize: "18px" }}>
+            <u>contact: </u>
+            <u>
+              <a href="mailto:thesooryanarayanan@gmail.com">
+                thesooryanarayanan@gmail.com
+              </a>
+            </u>
           </div>
         </div>
       </div>
@@ -154,8 +165,10 @@ const About = () => {
         </div>
       </div>
 
-      <div className="skills"><Skills /></div>
-    </div>
+      <div className="skills">
+        <Skills />
+      </div>
+    </motion.div>
   );
 };
 

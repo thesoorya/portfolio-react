@@ -2,17 +2,23 @@ import React, { useContext } from 'react'
 import Project from '../../components/Project/Project'
 import './Home.css'
 import { ContextProvider } from '../../components/Context/StoreContext';
+import { motion } from 'framer-motion'
 
 const Home = () => {
 
     const { projects } = useContext(ContextProvider)
 
     return (
-        <div className="home">
+        <motion.div
+            className="home"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, transition: {duration: .3} }}
+        >
             {projects.map((project, i) => (
                 <Project image={project.image} title={project.title} id={project.id} key={i} />
             ))}
-        </div>
+        </motion.div>
     )
 }
 
